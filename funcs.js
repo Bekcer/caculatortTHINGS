@@ -6,14 +6,12 @@ function input(inputValue) {
 
 }
 
-function clear() {
-    console.log("hello")
-    equation = "";
-    document.getElementById("output-value").innerHTML = equation;
-    console.log(equation)
-}
 
-function backspace(list) {
-    equation.splice(-1, 1); 
+function clearStuff() {
+    equation = equation.slice(1); 
+    document.getElementById('output-value').innerHTML = equation;
+}
+function backspace() {
+    equation = equation.substring(0, equation.length-1); 
     document.getElementById('output-value').innerHTML = equation;
 }
